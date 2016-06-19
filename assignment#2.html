@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table
+		{
+			border: 5px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		function hide()
+		{
+			var rows=document.getElementById('oe').childNodes;
+			for(var i=1;i<rows.length;i++)
+			{
+				if(((i-1)/2)%2==0)
+					rows[i].style.display="none";
+			}
+		}
+		function show()
+		{
+			var rows=document.getElementById('oe').childNodes;
+			for(var i=1;i<rows.length;i++)
+			{
+				if(((i-1)/2)%2==0)
+					rows[i].style.display="";
+			}
+		}
+	</script>
+
+</head>
+<body>
+<table border="2" id="table">
+	<tbody id="oe">
+		<tr><td>row1</td></tr>
+		<tr><td>row2</td></tr>
+		<tr><td>row3</td></tr>
+		<tr><td>row4</td></tr>
+		<tr><td>row5</td></tr>
+		<tr><td>row6</td></tr>
+		<tr><td>row7</td></tr>
+		<tr><td>row8</td></tr>
+	</tbody>		
+</table>
+<br>
+<button id="hide" onclick="hide();">Hide Odd rows</button>
+<button id="show" onclick="show();">Show Odd rows</button>
+</body>
+</html>

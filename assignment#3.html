@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function check()
+		{
+			var elem=document.getElementById("textfield");
+			var val=elem.value;
+			if(isNaN(val)==true)
+			{
+				elem.style.backgroundColor='red';
+				elem.setAttribute('readonly','true');
+				window.setTimeout(function(){elem.removeAttribute('readonly'); elem.style.backgroundColor='white';},3000);
+				return false;
+			}
+			return true;
+		}
+		function validateMyForm()
+		{
+  			if(check()==false)
+  			{ 
+    			returnToPreviousPage();
+    			return false;
+  			}
+  			return true;
+		}
+	</script>
+</head>
+<body>
+<form action="" method="get" onsubmit="return validateMyForm();">
+	Enter the numbers:<input type="text" id="textfield" onkeyup="check()"><br>
+	<input type="submit" id="sub" value="Submit" onclick="check()">
+</form>
+</body>
+</html>

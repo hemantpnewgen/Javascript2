@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript2</title>
+	<style type="text/css">
+		#but1
+		{
+			height:50px;
+			width:150px;
+			border:2px solid teal;
+			color:white;
+			background-color: grey;
+			border-radius: 6px;
+		}
+	</style>
+	<script type="text/javascript">
+		function change()
+		{
+			var b=document.getElementById('but1');
+			if(b.value=="Unlike")
+			{
+				b.value="Like";
+				b.style.backgroundColor="grey";
+			}
+			else if(b.value=="Like")
+			{
+				b.value="Unlike";
+				b.style.backgroundColor="orange";
+			}
+		}
+	</script>
+</head>
+<body>
+	<input onclick="change()" type="Submit" value="Like" id="but1">
+</body>
+</html>
